@@ -2939,7 +2939,7 @@ func marshalAnys(b []byte, arr []any) []byte {
 			b = marshalString(b, v)
 			b = append(b, ',')
 		case []byte:
-			b = marshalString(b, string(v))
+			b = marshalBinary(b, v)
 			b = append(b, ',')
 		}
 	}
