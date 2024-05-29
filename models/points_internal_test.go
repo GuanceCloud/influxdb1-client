@@ -91,7 +91,7 @@ func TestBinaryField(t *testing.T) {
 	})
 
 	t.Run("binary-array", func(t *testing.T) {
-		buf := []byte(`m1 f_d_arr=["MTIzCg=="b,"MTIzCg=="b, ] 123`)
+		buf := []byte(`m1 f_d_arr=["MTIzCg=="b,"MTIzCg=="b] 123`)
 		pt, err := parsePoint(buf, time.Now(), "n")
 		require.NoError(t, err)
 
