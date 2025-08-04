@@ -118,7 +118,7 @@ func TestMarshalFields(t *testing.T) {
 				[]byte("1"),
 				[]byte("1"),
 			},
-			exp: `value=["1","1"]`,
+			exp: `value=["MQ=="b,"MQ=="b]`,
 		},
 
 		{
@@ -130,7 +130,7 @@ func TestMarshalFields(t *testing.T) {
 		{
 			name:  "any-arr-with-mixed-types",
 			value: []any{false, true, 1, uint8(1), 3.14, "hello", []byte("world")},
-			exp:   `value=[false,true,1i,1u,3.14,"hello","world"]`,
+			exp:   `value=[false,true,1i,1u,3.14,"hello","d29ybGQ="b]`,
 		},
 	} {
 		t.Run(tt.name, func(t *testing.T) {
